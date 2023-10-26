@@ -4,4 +4,3 @@
 
 1. Visual Studios Code
 2. Git
-3. Virtual Box
