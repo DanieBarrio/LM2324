@@ -6,12 +6,35 @@
     <title>Pago</title>
 </head>
 <body>
+    <fieldset >
     <p><strong>FORMULARIO DE PAGO</strong>(Los campos obligatorios se han marcado con *)</p>
     <fieldset ><legend><strong>Información de contacto</strong></legend>
     <form action="phpfuturo">
         
-        <fieldset ><legend>Profesión</legend></fieldset>
-        
+        <fieldset ><legend>Profesión</legend>
+            
+            <input type="radio" name="estado" value="profesor">
+            <label for="profesor">Profesor/a</label><br>
+            <input type="radio" name="estado" value="estudiante">    
+            <label for="estudiante">Estudiante</label><br>
+            <input type="radio" name="estado" value="otro">
+            <label for="otro">Otro</label><br>
+
+        </fieldset>
+
+        <fieldset ><legend>Tratamiento</legend>
+            
+            <input type="radio" name="medico" value="persona">
+            <label for="persona">Sr/Sra</label><br>
+            <input type="radio" name="medico" value="doctor">    
+            <label for="doctor">Dr/Dra</label><br>
+            <input type="radio" name="medico" value="otro">
+            <label for="otro">Otro</label><br>
+
+        </fieldset>
+    
+        <label for="nombre">Nombre:*</label>
+        <input type="text" name="nombre"  required>
     
     
     
@@ -19,12 +42,11 @@
     
     
     
-    
-    
+    <input type="button" value="">
     
     </fieldset>
     
-
+    </fieldset>
 
 
     </form>
