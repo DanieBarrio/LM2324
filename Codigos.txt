@@ -1,0 +1,79 @@
+font-family: Arial, Helvetica, sans-serif ;
+Fuente del texto
+
+
+
+çdisplay: flex;
+justify-content: (center, flex-end, flex-startspace-between, space-around, space-evenly); 
+Separacion/justificacion de los elementos de dentro es decir el end los pone al final y between hace una separacion entre ellos de forma horizontal
+
+align-items: ( center, flex-start, flex-end)
+Separacion/justificacion de los elementos de dentro es decir el end los pone al final y de forma vertical
+
+flex-direction: column, row(por defecto) y luego estan las version revesa de estas row*reverse y column-reverse;
+Esto dice la forma en las que se ponen los items si es column se ponen en forma vertical mirando hacida abajo y el reverse hace que el primero sea el ultimo
+
+order: 2, 3, 4, etc; 
+esto hace que un item se vaya cambiando por otro segun el numero
+
+align-self: center; 
+Esto modifica a un solo item y funciona como el aling item
+
+flex-wrap: wrap; or flex-flow: wrap;
+Esto sirve para hacer que no este solo en una fila cuando se acabe el hueco en esta pasa a la siguiente fila
+
+display: grid;
+
+grid-template-columns: porcentaje, pixeles y fr;
+Sirve para hacer columnas con los elementos de la pagina y darles un porcentaje o pixeles de la pagina a cada unoç
+
+grid-template-row: porcentaje, pixeles y fr ;
+Sirve para hacer filas con los elementos de la pagina y darles un porcentaje o pixeles de la pagina a cada un
+
+column-gap: 15px;
+Separacion entre las columnas
+
+row-gap: 15px;
+Separacion entre las filas
+
+Gap: 15px 20%;El primer numero es para las filas segundo para las columnas
+Separacion de cada item
+
+grid-column-start: 3, span 3(este rellena lo que falta en la fila);
+sirve para cuantos huecos en las columnas quieres que se mueva/ ocupe una fila (la primera)
+
+grid-column-end: 3, span 3;
+sirve para cuantos huecos en las columnas quieres que se mueva/ ocupe una fila (ultima)
+
+grid-row-start: 3, span 3(este rellena lo que falta en la fila);
+sirve para cuantos huecos en la filas quieres que se mueva/ ocupe una fila (la primera)
+
+grid-row-end: 3, span 3;
+sirve para cuantos huecos en la filas quieres que se mueva/ ocupe una fila (ultima)
+
+grid-column: 1 / 4;
+Define tamaño que ocupa las columnas de un item
+
+grid-row: 2 / 5;
+Define tamaño que ocupa las filas de un item
+
+grid-template-areas:
+
+grid-area: redLand;
+
+grid-template-rows: 1fr 1fr;
+
+grid-template-columns: min-content 1fr;
+
+grid-auto-flow: column;
+
+grid-auto-columns: 100px;
+  
+grid-auto-rows: 100px;
+
+#field > div {
+  width: 75%;
+}
+
+
+
