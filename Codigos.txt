@@ -1,9 +1,25 @@
 font-family: Arial, Helvetica, sans-serif ;
 Fuente del texto
 
+@media only screen and (max-width: auto) {
+  body{
+
+  }
+}
+Usalo para que si se cierra la pagina se cierre contigo
+
+* {
+      box-sizing: border-box;
+}
+Borra formato
+
+border-top-left-radius: 20px;
+
+border-bottom-left-radius: 20px;
 
 
-çdisplay: flex;
+
+display: flex;
 justify-content: (center, flex-end, flex-startspace-between, space-around, space-evenly); 
 Separacion/justificacion de los elementos de dentro es decir el end los pone al final y between hace una separacion entre ellos de forma horizontal
 
@@ -58,12 +74,10 @@ grid-row: 2 / 5;
 Define tamaño que ocupa las filas de un item
 
 grid-template-areas:
+Variable que se usa para dividir trozos de pagina
 
 grid-area: redLand;
-
-grid-template-rows: 1fr 1fr;
-
-grid-template-columns: min-content 1fr;
+Definir nombre de anterior codigo
 
 grid-auto-flow: column;
 

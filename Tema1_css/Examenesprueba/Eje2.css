@@ -4,6 +4,9 @@
    
 
 }
+body{
+    font: 100% arial;
+}
 .todo{
     
     margin-top: 5%;
