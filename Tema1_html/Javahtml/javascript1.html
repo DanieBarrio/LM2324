@@ -6,6 +6,18 @@
     <title>Document</title>
     <script src="/Tema3_JavaScript/JavaScript1.js"></script>
 
+
+
+    <style>
+        #caja {
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        border: 2px dashed #f69c55;
+        }
+    </style>
+
+    
 </head>
 <body>
     <h1>si</h1>
@@ -20,7 +32,31 @@
     </script>
     <p id="parrafo"> Lorem ipsu</p>
     <button onclick="document.getElementById('parrafo').innerHTML = 'a por la wefa'"></button>
-
+    <h1>JavaScript puede modificar el estilo</h1>
+    <button type="button"
+        onclick='document.getElementsByTagName("h1")[0].style.fontSize="50px";
+        document.getElementsByTagName("h1")[1].style.color="blue";'>
+        Clic para cambiar el estilo
+    </button>
     
+
+    <h1>Utilidades de JavaScript</h1>
+<div id="caja">Ahora estoy</div>
+<button type="button"
+onclick='document.getElementById("caja").style.display="none"'>Clic para
+ocultar la caja</button>
+<button type="button"
+onclick='document.getElementById("caja").style.display="block"'>Clic para
+mostrar la caja</button>
+
+
+<h1>Uso de variables</h1>
+<script>
+var a=3;
+var b=5.6;
+var suma;
+suma = a+b;
+alert(suma);
+</script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Escribe tu nombre</h1>
+    <input type="text" id="entradaTexto">
+    <button onclick="saludo()" >
+        Pulsa
+
+    </button>
+    <script>   
+        function saludo(){
+            var cadena;
+            cadena = document.getElementById("entradaTexto").value;
+            alert('Hola '+cadena);
+        }
+    </script> 
+    <h1>Escribe tu usuario</h1>
+    <input type="text" id="usuario">
+    <h1>Escribe tu contraseña</h1>
+    <input type="password" id="contr">
+    <button onclick="Sesion()" >
+        Iniciar sesion
+
+    </button>
+    <script>
+        function Sesion(){
+            var usuario = document.getElementById("usuario").value;
+            var contra = document.getElementById("contr").value
+            alert('El usuario es ' + usuario +'y la contraseña es ' + contra)
+        }
+
+    </script>
+    <h1>Escribe tu usuario</h1>
+    <input type="text" id="usuario2">
+    <h1>Escribe tu contraseña</h1>
+    <input type="text" id="contr2">
+    <button onclick="Sesion2()" >
+        Suma 
+
+    </button>
+    <button onclick="Sesion3()" >
+        Resta 
+
+    </button>
+    <button onclick="Sesion4()" >
+        Multiplicar 
+
+    </button>
+    <button onclick="Sesion5()" >
+        Dividir
+
+    </button>
+    <p>
+
+    </p>
+    <script>
+        function Sesion2(){
+            var usuario2 = parseInt(document.getElementById("usuario2").value);
+            var contra2 = parseInt(document.getElementById("contr2").value);
+            var total = usuario2 + contra2;
+             document.getElementsByTagName("p")[0].innerHTML = total ;
+        }
+        function Sesion3(){
+            var usuario2 = parseInt(document.getElementById("usuario2").value);
+            var contra2 = parseInt(document.getElementById("contr2").value);
+            var total = usuario2 - contra2;
+             document.getElementsByTagName("p")[0].innerHTML = total ;
+        }
+        function Sesion4(){
+            var usuario2 = parseInt(document.getElementById("usuario2").value);
+            var contra2 = parseInt(document.getElementById("contr2").value);
+            var total = usuario2 * contra2;
+             document.getElementsByTagName("p")[0].innerHTML = total ;
+        }
+        function Sesion5(){
+            var usuario2 = parseInt(document.getElementById("usuario2").value);
+            var contra2 = parseInt(document.getElementById("contr2").value);
+            var total = usuario2 / contra2;
+             document.getElementsByTagName("p")[0].innerHTML = total ;
+        }
+
+    </script>
+   
+    
+
+</body>
+</html>
