@@ -1,6 +1,6 @@
 function suma(){
-    var usuario2 = parseInt(document.getElementById("usuario2").value);
-    var contra2 = parseInt(document.getElementById("contr2").value);
+    var usuario2 = parseInt(document.getElementsByClassName("num")[0].value);
+    var contra2 = parseInt(document.getElementsByClassName("num")[1].value);
     var total = usuario2 + contra2;
      document.getElementsByTagName("p")[0].innerHTML = total ;
 }

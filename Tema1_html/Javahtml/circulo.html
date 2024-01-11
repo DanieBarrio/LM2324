@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo</title>
+    <script src="/Tema3_JavaScript/trabajos/circulos.js"> </script>
+    <style>
+        .contenedor{
+            display: flex;
+        }
+        
+        #rojo{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 10px 10px;
+        }
+        #verde{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(23, 173, 55);
+            border-radius: 50%;
+            margin: 10px 10px;
+        }
+        #azul{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(21, 34, 212);
+            border-radius: 50%;
+            margin: 10px 10px;
+            
+        }
+        button {
+            width: 100px;
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="rojo"></div>
+        
+
+        <div id="verde"></div>
+        
+
+        <div id="azul"></div>
+        
+    </div>
+    <div class="contenedor">
+
+        <button onclick="ocultar1()" >
+            <p id="texto1">Ocultar</p>
+
+        </button>
+
+        
+        <button onclick="ocultar2()" >
+            <p id="texto2">Ocultar</p>
+
+        </button>
+
+        <button onclick="ocultar3()" >
+            <p id="texto3">Ocultar</p>
+
+        </button>
+    </div>
+</body>
+</html>
