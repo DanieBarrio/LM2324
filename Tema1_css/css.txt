@@ -1,2 +1,5 @@
 Pagina para personalizar texto
 https://www.mclibre.org/consultar/htmlcss/css/css-fuente.html
+
+algo mas 
+https://sentry.io/answers/html-text-input-allow-only-numeric-input/ para numeros
