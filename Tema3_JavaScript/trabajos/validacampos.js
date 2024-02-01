@@ -1,11 +1,20 @@
-function Sesion() {
-    
-    var usuario = document.getElementById("usuario").value;
-    var contra = document.getElementById("contr").value;
+function validar(elementos)
+{
+    let estanCorrectos = true
+        
+   for(var i=0;i<elementos.length; i++) 
+   {
 
-    if(usuario == "" || contra == "" ){
-        alert("Rellene los campos de usuario y contraseña");
+    if(elementos[i].value == "")
+    {
+
+        estanCorrectos = false
     }
-    else
-    alert('El usuario es ' + usuario +'y la contraseña es ' + contra);
+
+   }
+    
+    estanCorrectos = false
+
+    
+    return estanCorrectos;
 }

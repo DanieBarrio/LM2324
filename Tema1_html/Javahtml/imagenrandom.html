@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagen</title>
+</head>
+<body onload="seleccionaEscudo()">
+    <img id="cielo" src="" alt="">
+    <script>
+        let archivos = ["cielo1.jpg","slide.png","nodo.png"];
+        function random(min, max){
+            return Math.floor((Math.random()*(max - min + 1)) + min);
+
+        }
+        function seleccionaEscudo() {
+            let numero = random(0,archivos.length - 1);
+            document.getElementById("cielo").src = "/Tema1_imagenes/" + archivos[numero];
+
+        }
+
+    </script>
+    
+</body>
+</html>
