@@ -5,7 +5,7 @@ function validar(elementos)
    for(var i=0;i<elementos.length; i++) 
    {
 
-    if(elementos[i].value == "")
+    if(elementos[i].value == "" || !elementos[i].checked)
     {
 
         estanCorrectos = false
