@@ -54,36 +54,62 @@ function validarContra(){
     return vali;
 }
 function validarDni(){
-    var valida;
-    var numero, let, letra;
-    var dniField = document.getElementById('dni').value;
-    var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
-    dniField = dniField.toUpperCase();
-    var Ldni = dniField.length;
-    
-    if(Ldni <= 8 || Ldni >=10){
-        valida = false;
+    var letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+    var cadena= document.getElementById('dni').value;
+    var numero = cadena.substring(0,8);
+    var letraUsuario = cadena[8];
+    var letraReal = letra[numero % 23];
+    var dniValido = true;
+    if(letraUsuario != letraReal){
+        dniValido = false;
+
     }
-    else if(expresion_regular_dni.test(dniField) === true){
-        numero = dniField.substr(0,dniField.length-1);
-        numero = numero.replace('X', 0);
-        numero = numero.replace('Y', 1);
-        numero = numero.replace('Z', 2);
-        let = dniField.substr(dniField.length-1, 1);
-        numero = numero % 23;
-        letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
-        letra = letra.substring(numero, numero+1);
-        if(letra != let) {
-           
-            valida = false;
-        }else{
-            valida = true;
-        }
-    
+    else if (Ldni <= 8 || Ldni >=10){
+        dniValido = false;
     }
     else{
-        valida = false;
+        dniValido = true;
     }
-    return valida;
+
+
+    return dniValido;
 
 }
+
+
+
+
+//function validarDni(){
+//    var valida;
+//    var numero, let, letra;
+//    var dniField = document.getElementById('dni').value;
+//    var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
+//    dniField = dniField.toUpperCase();
+//    var Ldni = dniField.length;
+//    
+//    if(Ldni <= 8 || Ldni >=10){
+//        valida = false;
+//    }
+//    else if(expresion_regular_dni.test(dniField) === true){
+//        numero = dniField.substr(0,dniField.length-1);
+//        numero = numero.replace('X', 0);
+//        numero = numero.replace('Y', 1);
+//        numero = numero.replace('Z', 2);
+//        let = dniField.substr(dniField.length-1, 1);
+//        numero = numero % 23;
+//        letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+//        letra = letra.substring(numero, numero+1);
+//        if(letra != let) {
+//           
+//            valida = false;
+//        }else{
+//            valida = true;
+//        }
+//    
+//    }
+//    else{
+//        valida = false;
+//    }
+//    return valida;
+//
+//}
