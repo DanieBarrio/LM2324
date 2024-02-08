@@ -49,7 +49,7 @@ function media(){
         total = total + numero;    
     }
     total = total / parseFloat(fLen);
-    text += "<li>"  + total + "</li>";  
+    text += "<li>"  + total.toFixed(2) + "</li>";  
     text += "</ul>";
     document.getElementById("listado").innerHTML = text;
     
