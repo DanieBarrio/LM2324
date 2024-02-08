@@ -4,7 +4,7 @@ function introducir() {
     
     var texto = document.getElementById("numero").value; 
     var numerot = parseFloat(texto);
-    if(numerot >= 0  ||numerot <= 10  ){
+    if(numerot >= 0  && numerot <= 10  ){
         lista.push(texto);
 
     let text = "<ul>";
