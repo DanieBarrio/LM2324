@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor</title>
+    <script src="/Tema3_JavaScript/trabajos/mayor.js"></script>
+    <script src="/Tema3_JavaScript/trabajos/menor.js"></script>
+    <script src="/Tema3_JavaScript/trabajos/calculamayor.js"></script>
+    <script >
+        var lista=[];
+        function anadir(){
+            let numero = parseFloat(document.getElementById("numero").value);
+            lista.push(numero);
+            document.getElementById("numeros").innerHTML = lista;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculo del elemento mayor array </h1>
+    <input type="text" placeholder="introducir un numero" id="numero">
+    <p id="resultado"></p>
+    <p id="numeros"></p>
+    <button onclick="anadir()">añadir un numero</button>
+    <button onclick="var maximo=mayor(lista); document.getElementById('resultado').innerHTML=maximo + ' es el numero mas grande'">!Calcula mayor!</button>
+    <button onclick="var minimo=menor(lista); document.getElementById('resultado').innerHTML=minimo + ' es el numero mas chikito'">!Calcula menor!</button>
+    <button onclick="imprimir(lista)">Imprimeta</button>
+</body>
+</html>
