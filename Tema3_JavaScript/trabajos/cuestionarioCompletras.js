@@ -1,5 +1,5 @@
 /* Sustituye los ******** por lo que corresponda */
-var pos = 0, test, examen, pregunta, opcion, opciones, chA, chB, chC, correctas = 0;
+var  pos = 0, test, examen, pregunta, opcion, opciones, chA, chB, chC, correctas = 0;
 var preguntas = [
     [ "¿Cuánto es 10 + 4?", "12", "14", "16", "B" ],
 	[ "¿Cuánto es 20 - 9?", "7", "13", "11", "C" ],
@@ -15,6 +15,7 @@ function hacerPregunta(){
 		pos = 0;
 		correctas = 0;
 		return false;
+		
 	}
 	document.getElementById("estado").innerHTML = "Pregunta "+(pos+1)+" de "+preguntas.length; /* Mostramos el progreso en el cuestionario */
 	pregunta = preguntas[pos][0]; /* Introducimos en la variable global pregunta la pregunta */
@@ -36,7 +37,7 @@ function comprobarRespuesta(){
 			opcion = opciones[i].value;
 		}
 	}
-	if(opcion == preguntas[pos][4]) /* Si la opción marcada es la correcta según el array de arrays preguntas entonces ... */
+	if(opcion == preguntas[pos][preguntas[pos].length-1]) /* Si la opción marcada es la correcta según el array de arrays preguntas entonces ... */
     {
 		correctas+=1; /* Contamos que ha acertado */
 	}
