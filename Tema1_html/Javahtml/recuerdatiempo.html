@@ -7,6 +7,52 @@
 </head>
 <body>
     <h1>¡Adivina el numero en tiempo record!</h1>
-    <p>He pensado en un numero de 3 cifras</p>
+    <p id="digitos"></p>
+    <p id="numero"></p>
+    <input type="number" id="numeroint"/>
+    <button id="comenzar" onclick="comienzo()">Comenzar</button>
+    <button id="comprobar" onclick="comprobar()">Comprobar</button>
+    <script>
+        var numero=0 ;
+        
+        function aleatorio(){
+            document.getElementById("comenzar").style.display = "block";
+            document.getElementById("comprobar").style.display = "none";
+            document.getElementById("numeroint").style.display = "none";
+            document.getElementById("numero").style.display = "none";
+            numero = Math.floor(Math.random() * 1000);
+            var longitud = numero.toString().length
+            document.getElementById("digitos").innerHTML = "He pensado un numero de "+longitud+" cifras...";
+            
+            switch(longitud){
+                case 1: document.getElementById("numeroint").placeholder = "Adivina entre el 0 y el 9" ;; break;
+                case 2: document.getElementById("numeroint").placeholder = "Adivina entre el 0 y el 99" ;; break;
+                case 3: document.getElementById("numeroint").placeholder = "Adivina entre el 0 y el 999" ;; break;
+            }
+            
+        }
+        function comienzo(){
+            document.getElementById("numero").style.display = "block";
+            document.getElementById("numero").innerHTML = numero;
+            document.getElementById("comenzar").style.display = "none";
+            document.getElementById("comprobar").style.display = "block";
+            document.getElementById("numeroint").style.display = "block";
+            
+            
+        }
+        function comprobar(){
+            var numerocomp = document.getElementById("");
+            if(numero == parseInt(document.getElementById("numeroint")) )
+            {
+                
+                
+                aleatorio();
+            }
+            
+        }
+
+        
+        window.onload = aleatorio();
+    </script>
 </body>
 </html>
