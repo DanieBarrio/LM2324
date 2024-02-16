@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicidad</title>
+   
+</head>
+<body>
+    
+    <img src="/Tema1_imagenes/banner0.png" id="fotoActual" onclick="pulsa()">
+
+    <script>
+        var fotos=new Array();
+            var indice=0;
+            var totalFotos;
+            fotos[0]="../../Tema1_imagenes/banner0.png"; 
+            fotos[1]="../../Tema1_imagenes/banner1.png";
+            fotos[2]="../../Tema1_imagenes/banner2.png";
+            fotos[3]="../../Tema1_imagenes/banner3.png";
+            fotos[4]="../../Tema1_imagenes/banner4.png";
+            fotos[5]="../../Tema1_imagenes/banner5.png";
+        function publicidad(){
+            const myTimeout = setTimeout(siguiente, 3000);
+
+        }
+
+        function siguiente(){
+                
+                if (indice==fotos.length-1){
+                    indice=0 ; 
+                }
+                else
+                {
+                    indice=indice+1;        
+                }
+                document.getElementById("fotoActual").src =  "../../Tema1_imagenes/banner"+indice+".png";
+                
+                publicidad();
+        }
+        function pulsa(){
+           
+            
+            if(indice == 0){
+                window.open("https://store.dsautomobiles.es/configurable");
+            }
+            else if(indice == 1){
+                window.open("https://www.elcorteingles.es/supermercado/");
+            }
+            else if(indice == 2){
+                window.open("https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/");
+            }
+            else if(indice == 3){
+                window.open("https://www.madridhifi.com");
+            }
+            else if(indice == 4){
+                window.open("https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ");
+            }
+            else if(indice == 5){
+                window.open("https://www.tikamoon.es"); 
+            }
+
+        }
+        window.onload = publicidad();
+    </script>
+</body>
+</html>
