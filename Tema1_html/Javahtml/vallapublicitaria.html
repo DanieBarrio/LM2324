@@ -11,7 +11,14 @@
     <img src="/Tema1_imagenes/banner0.png" id="fotoActual" onclick="pulsa()">
 
     <script>
-        var fotos=new Array();
+            var enlaces=[
+            "https://store.dsautomobiles.es/configurable", 
+            "https://www.elcorteingles.es/supermercado/", 
+            "https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/", 
+            "https://www.madridhifi.com",
+            "https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ",
+            "https://www.tikamoon.es",
+            ];
             var indice=0;
             var fotosTotal = 6;
         function publicidad(){
@@ -34,7 +41,20 @@
         }
         function pulsa(){
            
-            
+            window.open(enlaces[indice]);
+            /*
+            switch(indice){
+                case 0: window.open("https://store.dsautomobiles.es/configurable"); break;
+                case 1: window.open("https://www.elcorteingles.es/supermercado/"); break;
+                case 2: window.open("https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/"); break;
+                case 3: window.open("https://www.madridhifi.com"); break;
+                case 4: window.open("https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ"); break;
+                case 5: window.open("https://www.tikamoon.es"); break;
+
+            }
+            */
+
+            /*
             if(indice == 0){
                 window.open("https://store.dsautomobiles.es/configurable");
             }
@@ -53,7 +73,7 @@
             else if(indice == 5){
                 window.open("https://www.tikamoon.es"); 
             }
-
+            */
         }
         window.onload = publicidad();
     </script>
