@@ -13,12 +13,7 @@
     <script>
         var fotos=new Array();
             var indice=0;
-            fotos[0]="../../Tema1_imagenes/banner0.png"; 
-            fotos[1]="../../Tema1_imagenes/banner1.png";
-            fotos[2]="../../Tema1_imagenes/banner2.png";
-            fotos[3]="../../Tema1_imagenes/banner3.png";
-            fotos[4]="../../Tema1_imagenes/banner4.png";
-            fotos[5]="../../Tema1_imagenes/banner5.png";
+            var fotosTotal = 6;
         function publicidad(){
             const myTimeout = setTimeout(siguiente, 3000);
 
@@ -26,7 +21,7 @@
 
         function siguiente(){
                 
-                if (indice==fotos.length-1){
+                if (indice==fotosTotal-1){
                     indice=0 ; 
                 }
                 else
