@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista</title>
+</head>
+<body>
+  <h1>Listado</h1>
+  <p id="listado"></p>
+  <input type="text" placeholder="añadir a la lista" id="aumentar">
+  <button onclick="Anadir()">Añadir</button>
+  <script>
+        const lista = [localStorage.getItem("lista") ];
+        lista[0]=lista[0].replace("<ul>", "")
+        lista[0]=lista[0].replace("</ul>", "")
+    function Anadir() {
+      
+      var texto = document.getElementById("aumentar").value; 
+      
+      
+      
+     
+      lista.push(texto);
+     
+      let text = "<ul>";
+      let fLen = lista.length;
+      text += lista[0];
+      for (let i = 1; i < fLen; i++) {
+        text += "<li>"  + lista[i] + "</li>";
+        
+      }
+      text += "</ul>";
+      
+      localStorage.setItem("lista", text) 
+      document.getElementById("listado").innerHTML = localStorage.getItem("lista");
+    }
+
+    function Cargar(){
+      document.getElementById("listado").innerHTML = localStorage.getItem("lista");
+    }
+    window.onload = Cargar();
+
+
+  </script>
+</body>
+</html>
