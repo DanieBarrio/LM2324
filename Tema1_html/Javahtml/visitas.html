@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita</title>
+</head>
+<body>
+    <p id="visita"></p>
+    <script>
+       
+      
+       
+        function cargarpagina(){
+            
+            
+            let valor = parseInt(localStorage.getItem("visitass")) ;
+            if (valor >= 0){
+            document.getElementById("visita").innerHTML = "Has visitado la página " + valor + " veces";
+
+            valor++;
+            localStorage.setItem("visitass", valor);
+            }else{
+            document.getElementById("visita").innerHTML = "Has visitado la página " + 0 + " veces";
+            localStorage.setItem("visitass", 1);}
+        }
+        window.onload = cargarpagina();
+    </script>
+</body>
+</html>

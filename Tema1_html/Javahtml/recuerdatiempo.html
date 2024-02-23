@@ -14,7 +14,7 @@
     <button id="comprobar" onclick="comprobar()">Comprobar</button>
     <script>
         var numero=0 ;
-        
+        var tiemporecord = localStorage.getItem("tiemporecor");;
         function aleatorio(){
             document.getElementById("comenzar").style.display = "block";
             document.getElementById("comprobar").style.display = "none";
@@ -42,14 +42,30 @@
         }
         function comprobar(){
             var numerocomp = document.getElementById("");
-            if(numero == parseInt(document.getElementById("numeroint")) )
+            var numerova = parseInt(document.getElementById("numeroint"));
+            if(numero == numerova )
             {
                 
                 
                 aleatorio();
             }
+            else if(numerova != numero){
+                
+            }
             
         }
+        function Guardar(){
+            localStorage.clear()
+            localStorage.setItem("tiemporecor",tiemporecord);
+        }
+        function cargarpagina(){
+            let valor= localStorage.getItem("tiemporecor");
+            if(valor!=null){
+                tiemporecord = valor;
+            }
+
+        }
+        
 
         
         window.onload = aleatorio();
