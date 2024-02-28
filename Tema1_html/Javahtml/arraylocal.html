@@ -11,11 +11,21 @@
   <input type="text" placeholder="añadir a la lista" id="aumentar">
   <button onclick="Anadir()">Añadir</button>
   <script>
-        const lista = [localStorage.getItem("lista") ];
-        lista[0]=lista[0].replace("<ul>", "")
-        lista[0]=lista[0].replace("</ul>", "")
+        let lista = [];
+        if(localStorage.getItem("lista") !== null){
+          lista = [localStorage.getItem("lista")] ;
+        }
+        
+
+        if(lista.length >0)
+        {
+          lista[0]=lista[0].replace("<ul>", "");
+          lista[0]=lista[0].replace("</ul>", "");
+          
+        }       
     function Anadir() {
       
+     
       var texto = document.getElementById("aumentar").value; 
       
       
@@ -32,8 +42,9 @@
       }
       text += "</ul>";
       
-      localStorage.setItem("lista", text) 
+      localStorage.setItem("lista", text); 
       document.getElementById("listado").innerHTML = localStorage.getItem("lista");
+      
     }
 
     function Cargar(){
