@@ -35,10 +35,18 @@
      
       let text = "<ul>";
       let fLen = lista.length;
-      text += lista[0];
+      
+      if(lista.length ==1){
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>"  + lista[i] + "</li>";
+        
+        }
+      }
+      else {
       for (let i = 1; i < fLen; i++) {
         text += "<li>"  + lista[i] + "</li>";
         
+      }
       }
       text += "</ul>";
       

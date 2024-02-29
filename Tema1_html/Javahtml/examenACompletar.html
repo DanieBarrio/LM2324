@@ -17,7 +17,8 @@
           <option value="Helvetica">Helvetica</option>
           <option value="Monospace">Monospace</option>
           </select> </td>
-      <td><input id="color" type="color" onchange="cambiarColor()"></td>
+      <td><input id="color" type="color" onchange="cambiarColor()"></td> 
+      <td><button onclick="Gaurdar()"></button></td>
     </tr>
   </table>
   <script type="text/javascript">
@@ -39,6 +40,23 @@
         document.getElementById('parrafo').style.fontFamily = font.value; // Cambiamos la fuente del parrafo
       }
 
+      function Guardar(){
+
+        
+      }
+      function Cargar(){
+        localStorage.getItem
+        if(localStorage.getItem("estilo")=null)
+        {
+
+        }
+        else{
+
+        }
+
+      }
+
+      window.onload = Cargar();
   </script>
   </body>
 </html>
