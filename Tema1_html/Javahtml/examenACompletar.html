@@ -18,41 +18,49 @@
           <option value="Monospace">Monospace</option>
           </select> </td>
       <td><input id="color" type="color" onchange="cambiarColor()"></td> 
-      <td><button onclick="Gaurdar()"></button></td>
+      <td><button onclick="Guardar()">Guardar</button></td>
     </tr>
   </table>
   <script type="text/javascript">
       
-      var tamano= 100; // TamaNo inicial
     
+      var preferencias = {
+          fuente:"Times New Roman",
+          tamano: 100,
+          color:"#000"
+      };
+      
       function aumenta(){
-        tamano+=25;
-        document.getElementById("parrafo").style.fontSize = tamano+"%"; // aumentamos un 25% el tamaño
+        preferencias.tamano += 25;
+        document.getElementById("parrafo").style.fontSize = preferencias.tamano+"%"; // aumentamos un 25% el tamaño
       }
       function disminuye(){
-        tamano-=25;
-        document.getElementById("parrafo").style.fontSize = tamano+"%"; //decrementamos un 25% el tamaño
+        preferencias.tamano -= 25;
+        document.getElementById("parrafo").style.fontSize = preferencias.tamano+"%"; //decrementamos un 25% el tamaño
       }
       function cambiarColor(){
         document.getElementById('parrafo').style.color = document.getElementById("color").value; //Cambiamos el color del parrafo
+        preferencias.color = document.getElementById("color").value;
       }
       function cambiarFuente(font) {
         document.getElementById('parrafo').style.fontFamily = font.value; // Cambiamos la fuente del parrafo
+        preferencias.fuente = font.value;
       }
 
       function Guardar(){
-
+        localStorage.setItem("preferencias", JSON.stringify(preferencias) );
         
       }
       function Cargar(){
-        localStorage.getItem
-        if(localStorage.getItem("estilo")=null)
-        {
+       
+        if(localStorage.getItem("preferencias") != null){
+          preferencias = JSON.parse(localStorage.getItem("preferencias"));
+          document.getElementById("parrafo").style.fontSize=preferencias.tamano+"%";
+          document.getElementById('parrafo').style.color= preferencias.color;
+          document.getElementById('parrafo').style.fontFamily= preferencias.fuente;
 
         }
-        else{
-
-        }
+        
 
       }
 
