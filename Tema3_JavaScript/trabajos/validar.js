@@ -42,10 +42,7 @@ function validarContra(){
     var contraField1 = document.getElementById('password1').value;
     var contraField2 = document.getElementById('password2').value;
     var Lcon = contraField1.length;
-    if(contraField1 != contraField2){
-        vali=false;
-    }
-    else if(Lcon < 8){
+    if(contraField1 != contraField2 || Lcon < 8){
         vali=false;
     }
     else{
@@ -65,12 +62,9 @@ function validarDni(){
    
 
     var Ldni = cadena.length;
-    if(letraUsuario != letraReal){
+    if(letraUsuario != letraReal || Ldni !=9){
         dniValido = false;
 
-    }
-    else if (Ldni !=9){
-        dniValido = false;
     }
     else{
         dniValido = true;
