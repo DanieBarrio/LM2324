@@ -56,15 +56,20 @@ function validarContra(){
 function validarDni(){
     var letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
     var cadena= document.getElementById('dni').value;
+    cadena = cadena.toUpperCase();
     var numero = cadena.substring(0,8);
     var letraUsuario = cadena[8];
+    
     var letraReal = letra[numero % 23];
     var dniValido = true;
+   
+
+    var Ldni = cadena.length;
     if(letraUsuario != letraReal){
         dniValido = false;
 
     }
-    else if (Ldni <= 8 || Ldni >=10){
+    else if (Ldni !=9){
         dniValido = false;
     }
     else{
