@@ -1,0 +1,103 @@
+[js]
+<html>
+
+
+
+<head>
+
+<title>Inserte un numero</title>
+
+
+
+<script language="JavaScript">
+
+
+
+function calcular() {
+
+
+
+var num1 = document.valores.T1.value;
+
+var num2 = document.valores.T2.value;
+
+var num3 = document.valores.T3.value;
+
+
+
+
+
+if (num1>num2 && num1>num3)
+
+{
+
+window.alert('El valor mayor es el numero a que es igual a ' + num1);
+
+}
+
+if (num2>num1 && num2>num3)
+{
+
+window.alert('El valor mayor es el numero a que es igual a ' + num2);
+
+}
+if (num3>num1 && num3>num2)
+{
+
+window.alert('El valor mayor es el numero a que es igual a ' + num3);
+
+}
+}
+</script>
+
+
+
+</head>
+
+
+
+<body bgcolor="#003333">
+
+
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center"><b><font face="Verdana">Inserte un numero</font></b></p>
+
+
+
+
+
+<form name="valores">
+
+<p align="center">
+
+        <input type="text" name="T1" size="5"><BR>
+
+<input type="text" name="T2" size="5"><BR>
+
+        <input type="text" name="T3" size="5"><BR>
+
+</p>
+
+<p align="center"><input type="button" value="Calcular" name="B1" onclick=calcular()><input type="reset" value="Borrar" name="B2"></p>
+
+</form>
+
+<p>&nbsp;</p>
+
+
+
+</body>
+
+
+
+</html>[/js]

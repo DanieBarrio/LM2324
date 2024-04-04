@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora distancia</title>
+</head>
+<body>
+    <h1>Calculadora de distancia de viajes</h1>
+    <input type="text" placeholder="100,200,150" id="numeros">
+    <button onclick="calcula()">Calcula</button>
+    <br>
+    <p id="Distancia"></p>
+
+    <script>
+        
+        function calcula(){
+            var numero = document.getElementById("numeros").value;
+            var variables = [];
+            var prefijo = 'texto';
+            var p = 0;
+            for (var i=0; i<=numero.length -1;i++) {
+                if(parseFloat(numero[i].value) != NaN){
+                    variables[prefijo + p] += parseFloat(numero[i].value);
+                  
+                }
+                else if(numero[i].value == "," && numero[i-1].value != "," ){
+                    p++
+                }
+                else{
+                    i=numero.legth;
+                    alert("No son Validos los campos introducidos")
+                }
+                
+
+              
+            }	
+      
+
+
+        }
+    </script>
+</body>
+</html>
