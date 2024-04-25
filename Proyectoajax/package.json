@@ -1,0 +1,19 @@
+{
+  "name": "proyectoajax",
+  "version": "1.0.0",
+  "description": "Intentoserver",
+  "main": "index.js", 
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanieBarrio/LM2324.git"
+  },
+  "author": "DanieBarrio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanieBarrio/LM2324/issues"
+  },
+  "homepage": "https://github.com/DanieBarrio/LM2324#readme"
+}
