@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 1</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p.pares, #parrafo").css('color', 'red');
+            $("#a").click(function(){
+              
+               
+                $("p.pares, #parrafo").css('color', 'yellow');
+            });
+            $("#v").click(function(){
+                
+                $("p.pares, #parrafo").css('color', 'green');
+   
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="parrafo">Lorem Ipsus</h1>
+    <p class="pares">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat ipsum sem, quis euismod lectus faucibus ac. Donec rhoncus et metus non blandit. Donec sollicitudin faucibus ex quis eleifend. In quis sem urna. Nulla facilisi. Vivamus eget ex a dolor cursus eleifend. Nam nibh odio, cursus sit amet nibh sit amet, eleifend convallis diam. Pellentesque elit risus, ullamcorper id dolor in, sollicitudin molestie enim. Nulla congue ex fermentum, bibendum risus laoreet, ornare turpis.</p>
+    <p>Integer ultricies malesuada ante, et euismod sem posuere eget. Pellentesque elementum dolor sed tortor dignissim sodales. Sed eget orci eget dui volutpat convallis sed ac felis. Proin ac dictum nibh. In ut augue vulputate, malesuada velit sagittis, faucibus mauris. Phasellus in nisi pellentesque, rhoncus ligula nec, malesuada turpis. Pellentesque aliquet porttitor eros, eget ultrices mi vulputate sit amet. Phasellus a pulvinar dolor. Morbi quis convallis nisi. Curabitur auctor interdum ipsum a facilisis. Vestibulum vel augue dignissim libero tristique tempor quis id nulla. Cras ex lorem, lobortis vitae tempor vel, lobortis at libero. Nunc efficitur pharetra volutpat. Nullam aliquam erat a auctor ornare.</p>
+    <p class="pares">In hac habitasse platea dictumst. Aenean viverra ipsum at interdum finibus. Etiam mollis commodo purus. Vestibulum sodales porttitor nunc, id tincidunt turpis gravida ut. Aliquam dapibus in lorem vitae dignissim. Vivamus a cursus sapien. Suspendisse venenatis tincidunt dolor. Etiam efficitur leo sem, in iaculis odio venenatis dictum. Vestibulum eget massa suscipit, elementum purus sed, vehicula justo. Ut gravida tincidunt magna vitae tristique.</p>
+    <button id="a">Amarillo</button><br>
+    <button id="v" >Verde</button>
+</body>
+
+</html>

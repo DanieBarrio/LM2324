@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AJAX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+  <body>
+    <input id="dolares" type="number" placeholder="Dolares">
+    <p id="objetivo">a</p>
+    <button id="Boton">Pulsa</button>
+    <script>
+       $(document).ready(function(){
+        
+        let url="https://v6.exchangerate-api.com/v6/cc13ebb7f1397d6c74e62006/latest/USD"; 
+        
+        $("#Boton").click(function(){
+            let dinerod= parseFloat($("#dolares").val());
+        $.get(url).done(function(datos){            
+            console.log(datos);
+            let euro = parseFloat(datos.conversion_rates.EUR)
+            let total = euro * dinerod
+            $("#objetivo").text(dinerod+"$ Dolares son "+total+"€ Euros");
+        }).fail(function(){
+            $("#objetivo").text("Ha ocurrido un error en la llamada al servidor");
+        });
+        
+        });
+       });
+    </script>
+  </body>
+</html>
