@@ -105,6 +105,14 @@
                 
             });
         });
+        $(function(){
+            $("#f_entrada").datepicker({
+                beforeShowDay: function(d){ 
+                    var day = d.getDay();
+                    return [day !== 3];
+                }
+            })
+        })
     </script>
 </body>
 </html>
